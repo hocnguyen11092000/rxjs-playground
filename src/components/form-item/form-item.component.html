@@ -1,0 +1,15 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <ng-container *ngIf="true">
+    <input
+      autofocus
+      name="name"
+      [(ngModel)]="data['name']"
+      required
+      #first="ngModel"
+    />
+  </ng-container>
+  <input name="last" [(ngModel)]="data['quantitdy']" />
+  <button>Submit</button>
+
+  {{ data["name"] }} - {{ data["quantitdy"] }}
+</form>
